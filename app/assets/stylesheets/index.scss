@@ -17,6 +17,7 @@ body{
 .contents {
   height: 100%;
   width: 100%;
+
 }
 .left-content{
   display: block;
@@ -31,22 +32,21 @@ body{
   font: 16px;
   background-color: #253141;
   width: 260px;
-  height: 90px;
-  line-height: 90px;
+  line-height: 35px;
   color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
-  padding: 0 20px;
+  padding: 40px 20px 33px 20px;
   li{
     display: inline;
     }
   a{
     color: #FFFFFF;
-  }
+    }
   &__list{
-         float: right;
-         letter-spacing: 10px;
-         }
+      float: right;
+      letter-spacing: 10px;
+      }
 }
 .group{
   padding: 20px 0 0 20px;
@@ -58,7 +58,50 @@ body{
       font-size: 11px;
       padding-top: 5px;
      }
-          }
+    }
 }
 
+.right-content{
+  padding-top: 40px;
+  float: right;
+  height: 100%;
+  width: calc(100vw - 300px);
+  background-color: #AAAAAA;
 
+}
+
+.group-tytle{
+  width: 100%;
+  padding: 35px 0 0 40px;
+  &__name{
+    font-size: 20px;
+    color: #333333;
+    padding-bottom: 15px;
+    }
+  &__member{
+    font-size: 12px;
+    color: #999999;
+    }
+}
+hr{
+  border-color: #eeeeee;
+}
+.message{
+  padding: 46px 0 40px 40px;
+  color: #434A54;
+  &__header-name {
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    }
+  &__header-time {
+    display: inline;
+    font-size: 12px;
+    color: #999999;
+  }
+  &__body-text{
+    font-size: 14px;
+    padding-top: 10px;
+  }
+}
