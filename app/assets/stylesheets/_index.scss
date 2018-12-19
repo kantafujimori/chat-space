@@ -6,6 +6,11 @@ body{
   height: 100%;
   width: 100%;
 }
+.wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 .header{
   background-color: #38AEF0;
   width: 100%;
@@ -66,13 +71,26 @@ body{
   float: right;
   height: 100%;
   width: calc(100vw - 300px);
-  background-color: #AAAAAA;
-
+  background-color: white;
+  &__edit{
+    float: right;
+    padding: 0 20px;
+    margin-right: 40px;
+    height: 40px;
+    margin-top: 28px;
+    border: solid 3px blue;
+    line-height: 40px;
+    color: blue;
+    a{
+      text-decoration: none;
+    }
+  }
 }
 
 .group-tytle{
   width: 100%;
   padding: 35px 0 0 40px;
+  border-bottom: solid 1px #eeeeee;
   &__name{
     font-size: 20px;
     color: #333333;
@@ -81,10 +99,8 @@ body{
   &__member{
     font-size: 12px;
     color: #999999;
+    margin-bottom: 9px;
     }
-}
-hr{
-  border-color: #eeeeee;
 }
 .message{
   padding: 46px 0 40px 40px;
@@ -103,5 +119,42 @@ hr{
   &__body-text{
     font-size: 14px;
     padding-top: 10px;
+  }
+}
+
+.bottom-content{
+  height: 50px;
+  width: calc(100vw - 380px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: -25px;
+  padding: 20px 40px;
+  background-color: #AAAAAA;
+  &__font{
+    position: absolute;
+  }
+  textarea{
+    height: 50px;
+    width: calc(100% - 100px);
+  }
+   textarea::placeholder{
+      line-height: 50px;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+  i{
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    margin-top: -0.5rem;
+  }
+  &__send{
+    background-color: #38AEF0;
+    height: 50px;
+    font-weight: bold;
+    float: right;
+    padding: 0 20px;
+    color: white;
   }
 }
