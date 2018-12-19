@@ -5,7 +5,8 @@
   .contents
     .left-content
       %ul.user
-        %li = current_user.name
+        %li
+          = current_user.name
         %li.user__list
           = link_to "" do
             %i.fa.fa-cog
