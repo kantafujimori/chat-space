@@ -1,63 +1,57 @@
-!!!
-%html
-  %body
-    %doctype{:html => ""}
-      %meta{:charset => "UTF-8"}/
-      　
-      %title ChatSpace
-      %link{:href => "application.scss", :rel => "stylesheet"}/
-      %div.wrapper
-        %header.header
-          チャットグループが作成されました。
-        .contents
-          .left-content
-            %ul.user
-              %li fujimori kanta
-              %li.user__list
-                %a{:href => ""}= fa_icon('cog lg')
-              %li.user__list
-                %a{:href => ""}= fa_icon('pencil-square-o lg')
-            %ul.group
-              %li.group__name
-                神
-                %p まだメッセージはありません
-              %li.group__name
-                aaaaaa
-                %p まだメッセージはありません。
-              %li.group__name
-                sampleグループ
-                %p まだメッセージはありません。
-          .right-content
-            .right-content__edit
-              %a{:href => ""}
-                Edit
-            %ul.group-tytle
-              %li.group-tytle__name
-                sampleグループ
-              %li.group-tytle__member Members: fujimorikanta
-            %ul
-              %li.message
-                %div
-                  %p.message__header-name fujimorikanta
-                  %p.message__header-time
-                    2018/12/16 06:23:20
-                %div
-                  %p.message__body-text
-                    hello
-            %ul
-              %li.message
-                %div
-                  %p.message__header-name fujimorikanta
-                  %p.message__header-time
-                    2018/12/16 06:23:20
-                %div
-                  %p.message__body-text
-                    hello
-            .bottom-content
-              %form{:action => "", :method => "post"}
-                .bottom-content__form
-                  %textarea.bottom-content__text{:name => "text", :placeholder => "type a message", :row => "1"}
-                  %label
-                    %input{:calss => "file_photo", :style => "display:none", :type => "file"}/
-                    %i.fa.fa-image
-                  %input.bottom-content__send{:type => "submit", :value => "Send"}/
+
+.wrapper
+  %header.header
+    チャットグループが作成されました。
+  .contents
+    .left-content
+      %ul.user
+        %li fujimori kanta
+        %li.user__list
+          = link_to "" do
+            %i.fa.fa-cog
+        %li.user__list
+          = link_to "" do
+            %i.fa.fa-pencil-square-o
+      %ul.group
+        %li.group__name
+          神
+          %p まだメッセージはありません
+        %li.group__name
+          aaaaaa
+          %p まだメッセージはありません。
+        %li.group__name
+          sampleグループ
+          %p まだメッセージはありません。
+    .right-content
+      .right-content__edit
+        = link_to "Edit", ""
+      %ul.group-tytle
+        %li.group-tytle__name
+          sampleグループ
+        %li.group-tytle__member Members: fujimorikanta
+      %ul
+        %li.message
+          %div
+            %p.message__header-name fujimorikanta
+            %p.message__header-time
+              2018/12/16 06:23:20
+          %div
+            %p.message__body-text
+              hello
+      %ul
+        %li.message
+          %div
+            %p.message__header-name fujimorikanta
+            %p.message__header-time
+              2018/12/16 06:23:20
+          %div
+            %p.message__body-text
+              hello
+      .bottom-content
+        %form{:action => "", :method => "post"}
+          .bottom-content__form
+            %textarea.bottom-content__text{:name => "text", :placeholder => "type a message", :row => "1"}
+            %label
+              %input{:calss => "file_photo", :style => "display:none", :type => "file"}/
+              %i.fa.fa-image
+            %input.bottom-content__send{:type => "submit", :value => "Send"}/
