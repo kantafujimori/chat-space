@@ -110,18 +110,18 @@ body{
 .message{
   padding: 46px 0 40px 40px;
   color: $pale-black;
-  &__header-name {
+  &__name {
     display: inline;
     font-size: 16px;
     font-weight: bold;
     margin-right: 10px;
     }
-  &__header-time {
+  &__time {
     display: inline;
     font-size: 12px;
     color: $pale-gray;
   }
-  &__body-text{
+  &__text{
     font-size: 14px;
     padding-top: 10px;
   }
