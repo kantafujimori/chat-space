@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :massages
-  has_many :user_ids
+  has_many :group_users
   has_many :groups, through: :group_users
 end
