@@ -1,23 +1,25 @@
-.left-content{
-  display: block;
-  background-color: #2f3e51;
-  padding-top: 40px;
+@import "config/colors";
+.wrapper{
   height: 100%;
-  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.left-content{
+  box-sizing: border-box;
   width: 300px;
+  color: $white;
+  float: left;
 }
 .user{
-  list-style: none;
-  font: 16px;
-  background-color: #253141;
-  width: 260px;
-  line-height: 35px;
-  color: $white;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 40px 20px 33px 20px;
+  background-color: $side_blue_dark;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
   li{
     display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
     }
   i{
     color: $white;
@@ -28,15 +30,22 @@
       letter-spacing: 10px;
       }
 }
-.group{
-  padding: 20px 0 0 20px;
-  &__name{
-    padding-bottom: 40px;
-    font-size: 15px;
-    color: $white;
-    p{
-      font-size: 11px;
-      padding-top: 5px;
-     }
+
+.groups{
+  background-color: $side_blue_light;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  .group{
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name{
+      color: $white;
+      font-size: 15px;
     }
+    &__message{
+      color: $white;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  }
 }

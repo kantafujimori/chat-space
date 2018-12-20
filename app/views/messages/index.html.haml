@@ -1,28 +1,9 @@
 
 .wrapper
-  %header.header
-    チャットグループが作成されました。
   .contents
-    .left-content
-      %ul.user
-        %li
-          = current_user.name
-        %li.user__list
-          = link_to edit_user_path(current_user) do
-            %i.fa.fa-cog
-        %li.user__list
-          = link_to new_group_path do
-            %i.fa.fa-pencil-square-o
-      %ul.group
-        %li.group__name
-          神
-          %p まだメッセージはありません
-        %li.group__name
-          aaaaaa
-          %p まだメッセージはありません。
-        %li.group__name
-          sampleグループ
-          %p まだメッセージはありません。
+
+    = render 'shared/side_bar'
+
     .right-content
       .right-content__edit
         = link_to "Edit", ""

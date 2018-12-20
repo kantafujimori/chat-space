@@ -8,9 +8,11 @@
     %li.user__list
       = link_to new_group_path do
         %i.fa.fa-pencil-square-o
-  %ul.group
-    = current_user.groups.each do |group|
-      %li.group__name
+  .groups
+    - current_user.groups.each do |group|
+      .group
         = link_to group_messages_path(group) do
-          = group.name
-          %p まだメッセージはありません
+          .group__name
+            = group.name
+          .group__message
+            まだメッセージはありません
