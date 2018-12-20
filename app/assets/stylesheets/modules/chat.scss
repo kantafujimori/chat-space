@@ -1,80 +1,9 @@
-
-
-html{
-  height: 100%;
-  width: 100%;
-}
-body{
-  height: 100%;
-  width: 100%;
-}
-.wrapper{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.header{
-  background-color: $blue;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  position: fixed;
-  line-height: 40px;
-}
-.contents {
-  height: 100%;
-  width: 100%;
-
-}
-.left-content{
-  display: block;
-  background-color: #2f3e51;
-  padding-top: 40px;
-  height: 100%;
-  float: left;
-  width: 300px;
-}
-.user{
-  list-style: none;
-  font: 16px;
-  background-color: #253141;
-  width: 260px;
-  line-height: 35px;
-  color: $white;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 40px 20px 33px 20px;
-  li{
-    display: inline;
-    }
-  i{
-    color: $white;
-    font-size: 16px;
-    }
-  &__list{
-      float: right;
-      letter-spacing: 10px;
-      }
-}
-.group{
-  padding: 20px 0 0 20px;
-  &__name{
-    padding-bottom: 40px;
-    font-size: 15px;
-    color: $white;
-    p{
-      font-size: 11px;
-      padding-top: 5px;
-     }
-    }
-}
-
 .right-content{
-  padding-top: 40px;
   float: right;
   height: 100%;
-  width: calc(100vw - 300px);
+  width: calc(100% - 300px);
   background-color: white;
+  box-sizing: border-box;
   &__edit{
     float: right;
     padding: 0 20px;
@@ -95,16 +24,17 @@ body{
   width: 100%;
   padding: 35px 0 0 40px;
   border-bottom: solid 1px #eeeeee;
+  height: 100px;
+  box-sizing: border-box;
   &__name{
     font-size: 20px;
     color: $black;
-    padding-bottom: 15px;
-    font-weight: bold;
+    margin-bottom: 15px;
     }
   &__member{
     font-size: 12px;
     color: $pale-gray;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     }
 }
 .message{

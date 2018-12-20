@@ -1,0 +1,51 @@
+@import "config/colors";
+.wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.left-content{
+  box-sizing: border-box;
+  width: 300px;
+  color: $white;
+  float: left;
+}
+.user{
+  background-color: $side_blue_dark;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+  li{
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    }
+  i{
+    color: $white;
+    font-size: 16px;
+    }
+  &__list{
+      float: right;
+      letter-spacing: 10px;
+      }
+}
+
+.groups{
+  background-color: $side_blue_light;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  .group{
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name{
+      color: $white;
+      font-size: 15px;
+    }
+    &__message{
+      color: $white;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  }
+}
