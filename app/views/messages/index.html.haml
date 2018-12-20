@@ -8,10 +8,10 @@
         %li
           = current_user.name
         %li.user__list
-          = link_to "" do
+          = link_to edit_user_path(current_user) do
             %i.fa.fa-cog
         %li.user__list
-          = link_to edit_user_path(current_user) do
+          = link_to new_group_path do
             %i.fa.fa-pencil-square-o
       %ul.group
         %li.group__name
@@ -49,10 +49,10 @@
             %p.message__text
               hello
       .bottom-content
-        %form{:action => "", :method => "post"}
+        %form{action: "", method: "post"}
           .bottom-content__form
-            %textarea.bottom-content__text{:name => "text", :placeholder => "type a message", :row => "1"}
+            %textarea.bottom-content__text{name: "text", placeholder: "type a message", row: "1"}
             %label
-              %input{:calss => "file_photo", :style => "display:none", :type => "file"}/
+              %input{calss: "file_photo", style: "display:none", type: "file"}/
               %i.fa.fa-image
-            %input.bottom-content__send{:type => "submit", :value => "Send"}/
+            %input.bottom-content__send{type: "submit", value: "Send"}/
