@@ -1,0 +1,13 @@
+
+%ul.messages
+  %li.message
+    .chat-body
+      %p.message__name
+        = message.user.name
+      %p.message__time
+        = message.created_at
+    .chat-body
+      - if message.content.present?
+        %p.message__text
+          = message.content
+      = image_tag message.image.url, class: 'message__image' if message.image.present?

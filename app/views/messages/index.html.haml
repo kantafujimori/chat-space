@@ -4,4 +4,23 @@
 
     = render 'shared/side_bar'
 
-    = render 'shared/right_bar'
+  .right-content
+    .right-content__edit
+      = link_to "Edit", edit_group_path(@group)
+    %ul.group-tytle
+      %li.group-tytle__name
+        = @group.name
+      %li.group-tytle__member
+        Members:
+        = @group.users.pluck(:name).join(" ")
+    .right-content__message
+      = render @messages
+      .bottom-content
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'bottom-content__text', placeholder: 'type a message'
+          .bottom-content__icon
+            = f.label :image, class: 'bottom-content__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'bottom-content__send'
+
