@@ -11,29 +11,30 @@
         %li.group-tytle__name
           sampleグループ
         %li.group-tytle__member Members: fujimorikanta
-      %ul.messages
-        %li.message
-          .chat-body
-            %p.message__name fujimorikanta
-            %p.message__time
-              2018/12/16 06:23:20
-          .chat-body
-            %p.message__text
-              hello
-      %ul.messages
-        %li.message
-          .chat-body
-            %p.message__name fujimorikanta
-            %p.message__time
-              2018/12/16 06:23:20
-          .chat-body
-            %p.message__text
-              hello
-      .bottom-content
-        %form{action: "", method: "post"}
-          .bottom-content__form
-            %textarea.bottom-content__text{name: "text", placeholder: "type a message", row: "1"}
-            %label
-              %input{calss: "file_photo", style: "display:none", type: "file"}/
-              %i.fa.fa-image
-            %input.bottom-content__send{type: "submit", value: "Send"}/
+      .right-content__message
+        %ul.messages
+          %li.message
+            .chat-body
+              %p.message__name fujimorikanta
+              %p.message__time
+                2018/12/16 06:23:20
+            .chat-body
+              %p.message__text
+                hello
+        %ul.messages
+          %li.message
+            .chat-body
+              %p.message__name fujimorikanta
+              %p.message__time
+                2018/12/16 06:23:20
+            .chat-body
+              %p.message__text
+                hello
+        .bottom-content
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'bottom-content__text', placeholder: 'type a message'
+            .bottom-content__icon
+              = f.label :image, class: 'bottom-content__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'bottom-content__send'

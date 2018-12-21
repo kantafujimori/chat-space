@@ -19,7 +19,6 @@
     }
   }
 }
-
 .group-tytle{
   width: 100%;
   padding: 35px 0 0 40px;
@@ -36,6 +35,11 @@
     color: $pale-gray;
     margin-bottom: 10px;
     }
+}
+
+.right-content__message{
+  height: calc(100vh - 100px);
+  position: relative;
 }
 .message{
   padding: 46px 0 40px 40px;
@@ -58,32 +62,33 @@
 }
 
 .bottom-content{
-  height: 50px;
-  width: calc(100vw - 380px);
+  height: 90px;
+  box-sizing: border-box;
+  width: calc(100vw - 300px);
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 20px 40px;
-  background-color: #AAAAAA;
-  &__font{
-    position: absolute;
-  }
-  textarea{
+  background-color: $gray;
+  &__text{
     height: 50px;
     width: calc(100% - 100px);
   }
-   textarea::placeholder{
+    ::placeholder{
       line-height: 50px;
       font-size: 16px;
       padding-left: 10px;
       color: $pale-black;
-    }
-  i{
+      }
+  &__icon{
     position: absolute;
-    right: 150px;
+    right:  150px;
     top: 50%;
     margin-top: -0.5rem;
   }
+   .hidden{
+    display: none;
+   }
   &__send{
     background-color: $blue;
     height: 50px;
