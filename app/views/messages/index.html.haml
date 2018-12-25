@@ -15,12 +15,13 @@
         = @group.users.pluck(:name).join(" ")
     .right-content__message
       = render @messages
-      .bottom-content
-        = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'bottom-content__text', placeholder: 'type a message'
-          .bottom-content__icon
-            = f.label :image, class: 'bottom-content__image' do
-              = fa_icon 'picture-o', class: 'icon'
-              = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'bottom-content__send'
+  .bottom-content
+    .bottom-content__form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'bottom-content__text', placeholder: 'type a message'
+        .bottom-content__icon
+          = f.label :image, class: 'bottom-content__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'bottom-content__send'
 
