@@ -38,8 +38,9 @@
 }
 
 .right-content__message{
-  height: calc(100vh - 100px);
+  height: calc(100vh - 190px);
   position: relative;
+  overflow: scroll;
 }
 .message{
   padding: 46px 0 40px 40px;
