@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function() {
 
   function buildHTML(message){
     var image = message.image ? `<img src="${message.image}"> ` : ""
-    var html = `<ul class="messages">
+    var html = `<ul class="messages" data-id="${message.id}">
                   <li class="message">
                   <div class="chat-body">
                     <p class="message__name">
@@ -49,4 +49,32 @@ $(document).on('turbolinks:load', function() {
       $('.bottom-content__send').prop('disabled', false);
     })
   });
+
+  var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var message_id = $('.messages:last').data('id');
+      $.ajax({
+        url: window.location.href,
+        type: 'GET',
+        data: { message_id: message_id },
+        dataType: 'json'
+      })
+      .done(function(data) {
+        var insertHTML = "";
+        if (data.length !== 0) {
+          data.forEach(function(message) {
+            var insertHTML = buildHTML(message);
+            $('.right-content__message').append(insertHTML);
+          });
+          $('.right-content__message').animate({scrollTop: $('.right-content__message')[0].scrollHeight}, 'fast');
+        } else {
+          ;
+        }
+      })
+      .fail(function() {
+        alert('自動更新に失敗しました')
+      });
+    } else {
+      clearInterval(interval);
+    }}, 5000 );
 });

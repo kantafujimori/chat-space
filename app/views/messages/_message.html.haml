@@ -1,5 +1,5 @@
 
-%ul.messages
+%ul.messages{"data-id": "#{message.id}"}
   %li.message
     .chat-body
       %p.message__name
@@ -11,3 +11,4 @@
         %p.message__text
           = message.content
       = image_tag message.image.url, class: 'message__image' if message.image.present?
+
