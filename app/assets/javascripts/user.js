@@ -53,9 +53,8 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(document).on('click', '.user-search-add', function(){
-    var user_id = $('a').data('user-id');
-    var user_name = $('a').data('user-name');
-    console.log(user_name)
+    var user_id = $('.user-search-add').data('user-id');
+    var user_name = $('.user-search-add').data('user-name');
     appendMoreUser(user_id, user_name);
     $(this).parent().remove();
   })
